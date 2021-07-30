@@ -1,62 +1,425 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>TemplateOne</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      /* Reset css */
 
-<body>
+      html,
+      body,
+      div,
+      span,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      abbr,
+      address,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      samp,
+      small,
+      strong,
+      sub,
+      sup,
+      var,
+      b,
+      i,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
 
-<header>
-  <ul class="nav">
-    <li><a href="#">The book series</a></li>
-    <li><a href="#">Testimonials</a></li>
-    <li><a href="#">The Author</a></li>
-    <li><a href="#">Free resources</a></li>
-  </ul>
-</header>
+      body {
+        line-height: 1;
+      }
 
-<div class="section">
-    <h1>You dont know JavaScript</h1>
-    <div class="row">
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      blockquote,
+      q {
+        quotes: none;
+      }
+
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+
+      a {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
+
+      /* change colours to suit your needs */
+      ins {
+        background-color: #ff9;
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* change colours to suit your needs */
+      mark {
+        background-color: #ff9;
+        color: #000;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      del {
+        text-decoration: line-through;
+      }
+
+      abbr[title],
+      dfn[title] {
+        border-bottom: 1px dotted;
+        cursor: help;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      /* change border colour to suit your needs */
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #cccccc;
+        margin: 1em 0;
+        padding: 0;
+      }
+
+      input,
+      select {
+        vertical-align: middle;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+      }
+
+      .nav {
+        width: 100%;
+        height: auto;
+        background-color: #333;
+        text-align: center;
+      }
+      .nav li {
+        display: inline;
+      }
+      .li a {
+        text-align: center;
+      }
+      .nav a {
+        display: inline-block;
+        font-size: 12px;
+        padding: 13px;
+        text-decoration: none;
+        color: white;
+      }
+      .section {
+        background-color: lightgrey;
+        width: 100%;
+        height: auto;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      .section h1 {
+        text-align: center;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .img-style {
+        text-align: center;
+      }
+      .img {
+        width: 50%;
+        height: 100%;
+      }
+      .aside p {
+        font-size: 12px;
+        text-align: center;
+        padding: 13px;
+      }
+      .btnOne {
+        text-align: center;
+        padding: 13px;
+      }
+      .btn-style {
+        width: 230px;
+        border: none;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        height: 28px;
+        background-color: orange;
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+
+      .form-inline {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-left: 150px;
+        padding: 10px;
+      }
+      .form-inline label {
+        margin: 5px 10px 5px 0;
+      }
+      .form-inline input {
+        margin: 5px 10px 5px 0;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 3px;
+      }
+      .form-inline button {
+        padding: 10px 20px;
+        background-color: dodgerblue;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #001a33;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+      }
+      footer p {
+        margin-top: 15px;
+      }
+
+      .btn-content {
+        width: 320px;
+        border: none;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        height: 24px;
+        background-color: orange;
+      }
+      @media screen and (max-width: 600px) {
+        .nav li a {
+          display: block;
+        }
+        [class*="col-"] {
+          width: 100%;
+        }
+        .btn-content {
+          width: auto;
+        }
+
+        .form-inline {
+          flex-direction: column;
+          align-items: stretch;
+          margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: 920px) {
+        .form-inline {
+          flex-direction: column;
+          margin-left: 0;
+        }
+      }
+    </style>
+    <title>Template</title>
+  </head>
+  <body>
+    <header>
+      <ul class="nav">
+        <li><a href="#">The book series</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">The Author</a></li>
+        <li><a href="#">Free resources</a></li>
+      </ul>
+    </header>
+
+    <div class="section">
+      <h1>You dont know JavaScript</h1>
+      <div class="row">
         <div class="col-6 img-style">
-            <img src="https://optionsystems.com.au/wp-content/uploads/2019/08/kisscc0-computer-icons-logo-brand-javascript-angle-js-5b741783856f77.0690615715343348515466.png"  
-            class="img" alt="image">
+          <img
+            src="https://optionsystems.com.au/wp-content/uploads/2019/08/kisscc0-computer-icons-logo-brand-javascript-angle-js-5b741783856f77.0690615715343348515466.png"
+            class="img"
+            alt="image"
+          />
         </div>
         <div class="col-6">
-            <div class="aside">
+          <div class="aside">
             <p>Don't just drift through JavaScript</p>
             <p>Understand how JavaScript works</p>
             <p>Start your journey through the bumpy side of JavaScript</p>
-            </div>
-            <div class="btnOne">
+          </div>
+          <div class="btnOne">
             <button type="button" class="btn-style">ORDER YOUR COPY NOW</button>
-           </div>
-
+          </div>
         </div>
+      </div>
+
+      <form class="form-inline">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email" name="email" />
+        <label for="pwd">Password:</label>
+        <input
+          type="password"
+          id="pwd"
+          placeholder="Enter password"
+          name="pwd"
+        />
+        <label> <input type="checkbox" name="remember" />Remember me </label>
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-
-<form class="form-inline">
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="Enter email" name="email">
-    <label for="pwd">Password:</label>
-    <input type="password" id="pwd" placeholder="Enter password" name="pwd">
-    <label>
-      <input type="checkbox" name="remember">Remember me
-    </label>
-    <button type="submit">Submit</button>
-  </form>
-
-  </div>
-
-
-<footer>
-    <p>The first ebook in the book series is absolutely free.</p>
-    <div class="btnOne">
-        <button type="button" class="btn-content">FIND OUT MORE ABOUT THIS OFFER</button>
-    </div>
-</footer>
-</body>
-</html> 
+    <footer>
+      <p>The first ebook in the book series is absolutely free.</p>
+      <div class="btnOne">
+        <button type="button" class="btn-content">
+          FIND OUT MORE ABOUT THIS OFFER
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
