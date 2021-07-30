@@ -1,2 +1,2 @@
-# Bootstrap-view
+# Responsive
 Created with CodeSandbox
