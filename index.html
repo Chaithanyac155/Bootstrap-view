@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-  </head>
-  <body>
-    <h1>
-      hello
-    </h1>
-  </body>
-</html>
+<html>
+<head>
+<title>TemplateOne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="layoutOne.css">
+</head>
+
+<body>
+
+<header>
+  <ul class="nav">
+    <li><a href="#">The book series</a></li>
+    <li><a href="#">Testimonials</a></li>
+    <li><a href="#">The Author</a></li>
+    <li><a href="#">Free resources</a></li>
+  </ul>
+</header>
+
+<div class="section">
+    <h1>You dont know JavaScript</h1>
+    <div class="row">
+        <div class="col-6 img-style">
+            <img src="https://optionsystems.com.au/wp-content/uploads/2019/08/kisscc0-computer-icons-logo-brand-javascript-angle-js-5b741783856f77.0690615715343348515466.png"  
+            class="img" alt="image">
+        </div>
+        <div class="col-6">
+            <div class="aside">
+            <p>Don't just drift through JavaScript</p>
+            <p>Understand how JavaScript works</p>
+            <p>Start your journey through the bumpy side of JavaScript</p>
+            </div>
+            <div class="btnOne">
+            <button type="button" class="btn-style">ORDER YOUR COPY NOW</button>
+           </div>
+
+        </div>
+    </div>
+
+
+<form class="form-inline">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email" name="email">
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" placeholder="Enter password" name="pwd">
+    <label>
+      <input type="checkbox" name="remember">Remember me
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+
+  </div>
+
+
+<footer>
+    <p>The first ebook in the book series is absolutely free.</p>
+    <div class="btnOne">
+        <button type="button" class="btn-content">FIND OUT MORE ABOUT THIS OFFER</button>
+    </div>
+</footer>
+</body>
+</html> 
